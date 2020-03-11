@@ -62,7 +62,7 @@ async def cookie(ctx):
 ## Code Cat. Status - BUSY FUCK OFF ##
 @bot.command(pass_context = True)
 async def meow(ctx):
-  await ctx.send(ctx.message.author.mention + " Code cat is busy, FUCK OFF", file=discord.File("~/teery/images/ccat.gif"))
+  await ctx.send(ctx.message.author.mention + " Code cat is busy, FUCK OFF", file=discord.File("/root/Teery/assets/ccat.gif"))
 
 
 
@@ -120,7 +120,7 @@ async def time(ctx, *, message):
 
   # Vodka Time #
   elif message == "lover" or message == "Lover":
-    await ctx.send("**время водки**", file=discord.File("~/teery/images/VodkaTime.png"))
+    await ctx.send("**время водки**", file=discord.File("/root/Teery/assets/VodkaTime.png"))
     return
 
   # Invalid input #
@@ -140,7 +140,7 @@ async def carol(ctx, game, message):
     small = list(range(1, 11)) * 2
     target = random.randint(100, 999)
     try:
-      tiles = random.sample(large, usr_large) + \ 
+      tiles = random.sample(large, usr_large) + \
       random.sample(small, 6 - usr_large)
       emb = discord.Embed(title=str(tiles), description="**Target:** " + str(target))
       await ctx.send(embed=emb)
@@ -349,4 +349,4 @@ async def on_reaction_remove(reaction, user):
           Role = discord.utils.get(user.guild.roles, name='Deep Canal Raider')
           await user.remove_roles(Role)
 
-bot.run('NDk2NjMwNzYxNzc3MDA0NTU0.XhYNOQ.lFkXeHylgzzCCJkNgpFqA3mrMQ4')
+bot.run('NDk2NjMwNzYxNzc3MDA0NTU0.XmkJJA.q5COyea_2vOdELyisCjcrkxNCA4')
