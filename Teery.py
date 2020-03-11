@@ -15,6 +15,10 @@ import random
 # Defines the command prefix #
 bot = commands.Bot(command_prefix='!', case_insensitive=True)
 
+# Gets API token from token.txt, prints to terminal for debugging #
+token = open("token.txt","r").readline()
+print(token)
+
 # Time Zone Variables #
 st = datetime.now(pytz.utc)
 bst = st + timedelta(hours=1)
@@ -349,4 +353,4 @@ async def on_reaction_remove(reaction, user):
           Role = discord.utils.get(user.guild.roles, name='Deep Canal Raider')
           await user.remove_roles(Role)
 
-bot.run('NDk2NjMwNzYxNzc3MDA0NTU0.XmkJJA.q5COyea_2vOdELyisCjcrkxNCA4')
+bot.run(token.strip())
