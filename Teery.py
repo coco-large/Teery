@@ -226,7 +226,7 @@ async def on_ready():
     emb.add_field(name="**Tank** ", value="<:rtank:590256130656043028>", inline=True)
     emb.add_field(name="**Blue Mage**", value="<:blu:665171828955676682>", inline=True)
     emb.add_field(name="**Map Squad**", value="<:TakeshiLook:663489130210000907>", inline=True)
-    emb.add_field(name="**Pokemon** ", value="<:slowpoge:665162491860484097>", inline=True)
+    emb.add_field(name="**Nintendo** ", value="<:slowpoge:665162491860484097>", inline=True)
     emb.add_field(name="**Monster Hunter**", value="<:mh_cheers:665162493332684810>", inline=True)
     msg = await channel.send(embed=emb) # Posts the embedded message to the #role-assign channel
 
@@ -279,7 +279,7 @@ async def on_reaction_add(reaction, user):
 
         # Pokemon #
         if emoji.name == 'slowpoge':
-            Role = discord.utils.get(user.guild.roles, name="Pokemon Boomers")
+            Role = discord.utils.get(user.guild.roles, name="Nintendog")
             await user.add_roles(Role)
 
         # Monster Hunter #
@@ -335,7 +335,7 @@ async def on_reaction_remove(reaction, user):
 
         # Pokemon #
         if emoji.name == 'slowpoge':
-            Role = discord.utils.get(user.guild.roles, name="Pokemon Boomers")
+            Role = discord.utils.get(user.guild.roles, name="Nintendog")
             await user.remove_roles(Role)
 
         # Monster Hunter #
